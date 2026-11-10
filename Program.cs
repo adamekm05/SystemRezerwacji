@@ -23,8 +23,9 @@ namespace SystemRezerwacji
             while (dziala)
             {
                 Console.Clear();
-                Console.WriteLine("=== SYSTEM REZERWACJI KINA ===");
+                Console.WriteLine("System rezerwacji miejsc w kinie");
                 Console.WriteLine($"Utarg calkowity: {utargCalkowity} PLN\n");
+                
                 Console.WriteLine("1. Wyswietl repertuar i dostepne miejsca");
                 Console.WriteLine("2. Pokaz uklad sali");
                 Console.WriteLine("3. Zarezerwuj pojedyncze miejsce");
@@ -62,9 +63,9 @@ namespace SystemRezerwacji
                             {
                                 bool sukces = Zarezerwuj(saleKinowe[idRez], rzad - 1, miejsce - 1, ref wolneMiejsca[idRez], ref utargCalkowity, cenaBiletu);
                                 if (sukces)
-                                    Console.WriteLine("Pomyslnie zarezerwowano miejsce.");
+                                    Console.WriteLine("Miejsce zarezerwowane");
                                 else
-                                    Console.WriteLine("Blad: Miejsce zajete lub nieprawidlowe dane.");
+                                    Console.WriteLine("Miejsce zajete lub nieprawidlowe dane.");
                             }
                             else
                             {
@@ -89,9 +90,9 @@ namespace SystemRezerwacji
                                 {
                                     bool sukces = Zarezerwuj(saleKinowe[idGrupa], rzadGrupa - 1, wybraneMiejsca, ref wolneMiejsca[idGrupa], ref utargCalkowity, cenaBiletu);
                                     if (sukces)
-                                        Console.WriteLine("Zarezerwowano wybrane miejsca.");
+                                        Console.WriteLine("Zarezerwowano miejsca.");
                                     else
-                                        Console.WriteLine("Blad: Przynajmniej jedno z miejsc jest niedostepne.");
+                                        Console.WriteLine("Przynajmniej jedno z miejsc jest niedostepne.");
                                 }
                                 else
                                 {
